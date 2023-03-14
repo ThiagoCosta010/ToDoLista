@@ -27,7 +27,7 @@ const saveTodo = (text, done = 0, save = 1) => {
   editBtn.classList.add('edit-todo')
   editBtn.innerHTML = '<i class="fa-solid fa-pen"></i>'
   todo.appendChild(editBtn)
-  
+
   const deleteBtn = document.createElement('button')
   deleteBtn.classList.add('remove-todo')
   deleteBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>'
@@ -75,22 +75,22 @@ const filterTodos = (filterValue) => {
       todos.forEach((todo) => (todo.style.display = 'flex'))
       break
     case 'done':
-      todos.forEach((todo) => 
+      todos.forEach((todo) =>
         todo.classList.contains('done')
-          ? (todo.style.display = 'flex')
-          : (todo.style.display = 'none')
-      )
+          ? (todo.style.display = 'flex')  
+          : (todo.style.display = 'none')  
+    )
       break
-      case 'todo':
-        todos.forEach((todo) =>
-          !todo.classList.contains('done')
-            ? (todo.style.display = 'flex')
-            : (todo.style.display = 'none')
-        )
-        break
-      
-      default:
-        break
+    case 'todo':
+      todos.forEach((todo) =>
+        !todo.classList.contains('done')
+          ? (todo.style.display = 'flex')  
+          : (todo.style.display = 'none')  
+    )
+      break
+
+    default:
+      break
   }
 }
 todoForm.addEventListener('submit', (e) => {
@@ -104,7 +104,7 @@ document.addEventListener('click', (e) => {
   const targetEl = e.target
   const parentEl = targetEl.closest('div')
   let todoTitle
-  
+
   if(parentEl && parentEl.querySelector('h3')) {
     todoTitle = parentEl.querySelector('h3').innerText || ''
   }
@@ -127,7 +127,6 @@ cancelEditBtn.addEventListener('click', (e) => {
   e.preventDefault()
   toggleForms()
 })
-
 editForm.addEventListener('submit', (e) => {
   e.preventDefault()
   const editInputValue = editInput.value
@@ -136,12 +135,10 @@ editForm.addEventListener('submit', (e) => {
   }
   toggleForms()
 })
-
 searchInput.addEventListener('keyup', (e) => {
   const search = e.target.value
   getSearchedTodos(search)
 })
-
 eraseBtn.addEventListener('click', (e) => {
   e.preventDefault()
   searchInput.value = ''
@@ -154,8 +151,7 @@ filterBtn.addEventListener('change', (e) => {
 const getTodosLocalStorage = () => {
   const todos = JSON.parse(localStorage.getItem('todos')) || []
   return todos
-}
-
+} 
 const loadTodos = () => {
   const todos = getTodosLocalStorage()
   todos.forEach((todo) => {
