@@ -77,18 +77,18 @@ const filterTodos = (filterValue) => {
     case 'done':
       todos.forEach((todo) =>
         todo.classList.contains('done')
-          ? (todo.style.display = 'flex')  
-          : (todo.style.display = 'none')  
+          ? (todo.style.display = 'flex')
+          : (todo.style.display = 'none')
     )
       break
     case 'todo':
       todos.forEach((todo) =>
         !todo.classList.contains('done')
-          ? (todo.style.display = 'flex')  
-          : (todo.style.display = 'none')  
+          ? (todo.style.display = 'flex')
+          : (todo.style.display = 'none')
     )
       break
-
+    
     default:
       break
   }
@@ -151,7 +151,7 @@ filterBtn.addEventListener('change', (e) => {
 const getTodosLocalStorage = () => {
   const todos = JSON.parse(localStorage.getItem('todos')) || []
   return todos
-} 
+}
 const loadTodos = () => {
   const todos = getTodosLocalStorage()
   todos.forEach((todo) => {
