@@ -47,7 +47,7 @@ function displayTodos() {
         input.checked = todo.done
         span.classList.add('bubble')
 
-        if (todo.category == `personal`) {
+        if (todo.category == 'personal') {
             span.classList.add('personal')
         } else {
             span.classList.add('business')
@@ -69,7 +69,6 @@ function displayTodos() {
         todoItem.appendChild(label)
         todoItem.appendChild(content)
         todoItem.appendChild(actions)
-
         todoList.appendChild(todoItem)
 
         if (todo.done) {
@@ -81,10 +80,9 @@ function displayTodos() {
 
             if (todo.done) {
                 todoItem.classList.add('done')
-            }else {
+            } else {
                 todoItem.classList.remove('done')
             }
-
             displayTodos()
         })
 
