@@ -84,8 +84,8 @@ const filterTodos = (filterValue) => {
     case 'todo':
       todos.forEach((todo) =>
         !todo.classList.contains('done')
-          ? (todo.style.display = 'flex')
-          : (todo.style.display = 'none')
+          ? (todo.style.display = 'flex')  
+          : (todo.style.display = 'none')  
     )
       break
 
