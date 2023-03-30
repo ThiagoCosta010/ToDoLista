@@ -88,7 +88,7 @@ const filterTodos = (filterValue) => {
           : (todo.style.display = 'none')  
     )
       break
-
+    
     default:
       break
   }
