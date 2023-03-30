@@ -38,10 +38,10 @@ function displayTodos() {
         const label = document.createElement('label')
         const input = document.createElement('input')
         const span = document.createElement('span')
-        const content = document.createElement('div')
-        const actions = document.createElement('div')
-        const edit = document.createElement('button')
-        const deleteButton = document.createElement('button')
+        const content = document.createElement(`div`)
+        const actions = document.createElement(`div`)
+        const edit = document.createElement(`button`)
+        const deleteButton = document.createElement(`button`)
 
         input.type = 'checkbox'
         input.checked = todo.done
@@ -103,5 +103,5 @@ function displayTodos() {
             localStorage.setItem('todos', JSON.stringify(todos))
             displayTodos()
         })
-    })
+    })   
 }
