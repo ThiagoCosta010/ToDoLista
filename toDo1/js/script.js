@@ -78,17 +78,17 @@ const filterTodos = (filterValue) => {
       todos.forEach((todo) =>
         todo.classList.contains('done')
           ? (todo.style.display = 'flex')
-          : (todo.style.display = 'none')
+          : (todo.style.display = 'none')  
     )
       break
     case 'todo':
       todos.forEach((todo) =>
         !todo.classList.contains('done')
-          ? (todo.style.display = 'flex')  
-          : (todo.style.display = 'none')  
+          ? (todo.style.display = 'flex')
+          : (todo.style.display = 'none')
     )
       break
-    
+
     default:
       break
   }
@@ -110,7 +110,7 @@ document.addEventListener('click', (e) => {
   }
   if(targetEl.classList.contains('finish-todo')) {
     parentEl.classList.toggle('done')
-    
+
     updateTodoStatusLocalStorage(todoTitle)
   }
   if(targetEl.classList.contains('remove-todo')) {
@@ -170,7 +170,7 @@ const removeTodoLocalStorage = (todoText) => {
 }
 const updateTodoStatusLocalStorage = (todoText) => {
   const todos = getTodosLocalStorage()
-  todos.map((todo) => 
+  todos.map((todo) =>
     todo.text === todoText ? (todo.done = !todo.done) : null
   )
   localStorage.setItem('todos', JSON.stringify(todos))
