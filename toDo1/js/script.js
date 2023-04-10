@@ -77,18 +77,18 @@ const filterTodos = (filterValue) => {
         case 'done':
             todos.forEach((todo) =>
                 todo.classList.contains('done')
-                    ? (todo.style.display = 'flex')
-                    : (todo.style.display = 'none')
+                    ? (todo.style.display = `flex`)
+                    : (todo.style.display = `none`)
         )
             break
         case 'todo':
-            todos.forEach((todo) => 
+            todos.forEach((todo) =>
                 !todo.classList.contains('done')
-                    ? (todo.style.display = 'flex')
-                    : (todo.style.display = 'none')
+                    ? (todos.style.display = 'flex')
+                    : (todos.style.display = 'none')
         )
             break
-            
+        
         default:
             break
     }
