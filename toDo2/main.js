@@ -39,15 +39,15 @@ function displayTodos() {
         const input = document.createElement('input')
         const span = document.createElement('span')
         const content = document.createElement('div')
-        const actions = document.createElement('div')
-        const edit = document.createElement('button')
-        const deleteButton = document.createElement('button')
+        const actions = document.createElement(`div`)
+        const edit = document.createElement(`button`)
+        const deleteButton = document.createElement(`button`)
 
-        input.type = `checkbox`
+        input.type = 'checkbox'
         input.checked = todo.done
-        span.classList.add(`bubble`)
+        span.classList.add('bubble')
 
-        if (todo.category == `personal`) {
+        if (todo.category == 'personal') {
             span.classList.add('personal')
         } else {
             span.classList.add('business')
