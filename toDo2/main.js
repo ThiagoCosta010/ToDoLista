@@ -39,9 +39,9 @@ function displayTodos() {
         const input = document.createElement('input')
         const span = document.createElement('span')
         const content = document.createElement('div')
-        const actions = document.createElement(`div`)
-        const edit = document.createElement(`button`)
-        const deleteButton = document.createElement(`button`)
+        const actions = document.createElement('div')
+        const edit = document.createElement('button')
+        const deleteButton = document.createElement('button')
 
         input.type = 'checkbox'
         input.checked = todo.done
@@ -61,7 +61,7 @@ function displayTodos() {
         content.innerHTML = `<input type="text" value="${todo.content}" readonly>`
         edit.innerHTML = 'Edit'
         deleteButton.innerHTML = 'Delete'
-
+        
         label.appendChild(input)
         label.appendChild(span)
         actions.appendChild(edit)
